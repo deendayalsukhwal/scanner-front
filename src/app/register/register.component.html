@@ -1,0 +1,20 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <label for="firstName">First Name:</label>
+    <input id="firstName" formControlName="firstName" required>
+    
+    <label for="lastName">Last Name:</label>
+    <input id="lastName" formControlName="lastName" required>
+    
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" required>
+    
+    <label for="mobileNo">Mobile Number:</label>
+    <input id="mobileNo" formControlName="mobileNo" required>
+    
+    <button type="submit">Submit</button>
+  </form>
+  
+  <div *ngIf="qrData">
+    <qrcode [qrdata]="qrData"></qrcode>
+  </div>
+  
